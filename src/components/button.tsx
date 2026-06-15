@@ -10,8 +10,10 @@ export const Button = ({variant= "primary", ...props  }: ButtonProps) => {
   return (
     <button
       {...props}
-      className={`${getVarientStyles(variant)} transition-color py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed `}
-    ></button>
+      className={`${getVarientStyles(variant)} transition-colors py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed `}
+    >
+      {props.children}
+    </button>
   );
 };
 
