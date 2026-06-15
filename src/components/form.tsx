@@ -8,7 +8,7 @@ export const HabitForm = () => {
         placeholder="Habit name"
         className="flex-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
-      <Button>Save Habit</Button>
+      <Button className="rounded-2xl">Save Habit</Button>
     </form>
   );
 };

@@ -20,11 +20,13 @@ export const HabitItem = ({ habit }: HabitItemProps) => {
           <span className="font-medium">{habit.name}</span>
           <span className="text-sm text-yellow-400">2</span>
         </div>
-        <Button>Delete</Button>
+        <Button variant="danger">
+          Delete
+        </Button>
       </div>
       <div className="flex gap-1.5">
         {visibleDates.map((date) => (
-          <Button key={date.toISOString()}>
+          <Button className="flex flex-col flex-1 items-center gap-0.3 rounded-lg text-xs" key={date.toISOString()}>
             <span className="font-medium">{format(date, "EEE")}</span>
             <span>{format(date, "d")}</span>
           </Button>
