@@ -25,7 +25,7 @@ export const Button = ({variant= "primary",className , ...props  }: ButtonProps)
     case "secondary":
       return "bg-gray-800 hover:bg-gray-600  text-gray-200";
     case "danger":
-      return "bg-red-800 hover:bg-red-600  text-white";
+      return "bg-red-800 hover:bg-red-600  text-white hover:cursor-pointer";
     default:
       throw new Error(`Unknown variant: ${variant satisfies never}`);
   }
