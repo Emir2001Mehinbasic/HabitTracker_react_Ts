@@ -1,18 +1,15 @@
-import { useState, type FormEvent } from 'react';
+import { useState, type FormEvent} from 'react';
 import { Button } from './button';
+import { useHabits } from '../context/habitContext';
 
-
-type HabitFormProps = {
-  onAddHabit: (name: string) => void;
-};
-
-export const HabitForm = ({ onAddHabit }: HabitFormProps) => {
+export const HabitForm = () => {
+  const { addHabit } = useHabits();
   const [name, setName] = useState("");
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
      if(!name.trim()) return;
-     onAddHabit(name);
+     addHabit(name);
      setName("");
     }   
 
