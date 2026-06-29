@@ -52,6 +52,22 @@ npm run build
 npm run preview
 ```
 
+### Build a Docker image
+
+This project now includes a `Dockerfile` and `nginx.conf` so the app can be built and served in a container.
+
+```bash
+docker build -t habittracker .
+```
+
+Run the container locally on port 8080:
+
+```bash
+docker run -p 8080:80 habittracker
+```
+
+Open the app in your browser at `http://localhost:8080`.
+
 ## Scripts
 
 - `npm run dev` - start the Vite development server
