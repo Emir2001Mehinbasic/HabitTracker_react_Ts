@@ -10,7 +10,7 @@ COPY package.json ./
 
 USER root
 
-RUN chown -R app/app .
+RUN chown -R app:app .
 
 USER app
 
